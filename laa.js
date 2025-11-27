@@ -8,9 +8,9 @@ const period = {
     period2: '2025-10-31',
     interval: '1d'
 }
-const file = fs.createWriteStream('output.csv');
+const file = fs.createWriteStream('LAA.csv');
 const yahooFinance = new YahooFinance();
-const fred = new Fred('');
+const fred = new Fred(process.env.FRED_API_KEY);
 const RRSFS = await fred.getData('RRSFS')
 const INDPRO = await fred.getData('INDPRO')
 const FINAL = []
