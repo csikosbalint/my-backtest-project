@@ -1,5 +1,7 @@
 import YahooFinance from "yahoo-finance2";
 import Fred from "./fred.js";
+import dotenv from "dotenv";
+dotenv.config();
 import { SMA } from "technicalindicators";
 import fs from "fs";
 

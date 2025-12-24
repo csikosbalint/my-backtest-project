@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "technicalindicators": "^3.1.0",
-    "yahoo-finance2": "^3.10.2"
+    "yahoo-finance2": "^3.10.2",
+    "dotenv": "^16.1.4"
   }
 }
