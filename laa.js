@@ -1,5 +1,6 @@
 import YahooFinance from "yahoo-finance2";
 import Fred from "./fred.js";
+import { dateDiff, isSameDay } from "./tools.js";
 import dotenv from "dotenv";
 dotenv.config();
 import { SMA } from "technicalindicators";
@@ -60,17 +61,6 @@ class Asset {
     get symbol() {
         return this.#symbol;
     }
-}
-
-const dateDiff = (date1, date2, abs = true) => {
-    const diffTime = abs ? Math.abs(date1 - date2) : (date1 - date2);
-    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-}
-
-const isSameDay = (date1, date2) => {
-    return date1.getFullYear() === date2.getFullYear() &&
-        date1.getMonth() === date2.getMonth() &&
-        date1.getDate() === date2.getDate();
 }
 
 const asset = new Asset(['SHY', 'QQQ']);
